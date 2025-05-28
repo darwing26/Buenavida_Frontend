@@ -1,0 +1,127 @@
+.wrapper {
+  background-color: white;
+  padding: 30px 20px;
+  width: 20%;
+  height: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Gilroy';
+}
+
+.wrapper h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.container {
+  position: relative;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.slider-track {
+  width: 100%;
+  height: 5px;
+  background: #5ccb5f;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background-color: #5ccb5f;
+  border-radius: 50%;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.price-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.price-inputs div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.price-inputs label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.price-inputs input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.filter-button {
+  background-color: #5ccb5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Gilroy';
+}
+
+.filter-button:hover {
+  background-color: #efa229;
+  color : black;
+}
+
+
+
+
+.clear-filter-button {
+  margin-top: 20px;
+  background-color: #5ccb5f;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Gilroy';
+}
+
+.clear-filter-button:hover {
+  background-color: #efa229;
+  color : black;
+}
+
+
+.filter-status {
+  padding : 10px;
+  background-color:   #f8f9fa;
+  border : 1px solid #dee2e6;
+  border-radius : 4px;
+  margin-bottom: 20px;
+  font-family: 'Gilroy';
+
+}

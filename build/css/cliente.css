@@ -1,0 +1,191 @@
+/* Estilos para el modal de cliente */
+
+#client-body {
+    display: flex;
+    flex-direction: column;
+}
+
+thead {
+    font-family: 'Gilroy';
+}
+
+tbody {
+    font-family: 'Gilroy';
+}
+
+.client-modal-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    
+    padding-bottom: 10px;
+}
+
+.client-info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    align-items: right;
+    
+}
+
+.client-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.client-info strong {
+    color: #333;
+    min-width: 80px;
+    display: inline-block;
+}
+
+/* Estilos para la tabla de pedidos */
+.client-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.client-orders-table th,
+.client-orders-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-orders-table th {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.client-orders-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.client-orders-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.view-invoice-btn {
+    background-color: #5ccb5f;
+    font-family: 'Gilroy';
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.view-invoice-btn:hover {
+    background-color: #efa229;
+    color: black;
+}
+
+/* Estilos para la factura */
+
+.client-invoice-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+   
+    padding-bottom: 10px;
+}
+
+.client-invoice-container h3 {
+    color: #333;
+    margin: 20px 0 10px 0;
+}
+
+.client-invoice-container p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.client-invoice-container strong {
+    color: #333;
+}
+
+/* Estilos para la tabla de la factura */
+.client-invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.client-invoice-table th,
+.client-invoice-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-invoice-table th {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.client-invoice-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.client-invoice-table td:nth-child(2),
+.client-invoice-table td:nth-child(3),
+.client-invoice-table td:nth-child(4) {
+    text-align: right;
+}
+
+.client-invoice-back-btn {
+    background-color: #009929;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Gilroy';
+}
+
+.client-invoice-back-btn:hover {
+    background-color: #efa229;
+    color: black;
+}
+
+/* Loading y error states */
+.loading, .error {
+    text-align: center;
+    padding: 40px;
+    font-weight: bold;
+}
+
+.loading {
+    color: #007bff;
+}
+
+.error {
+    color: #dc3545;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .client-modal-container,
+    .client-invoice-container {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+    
+    .client-orders-table,
+    .client-invoice-table {
+        font-size: 14px;
+    }
+    
+    .client-orders-table th,
+    .client-orders-table td,
+    .client-invoice-table th,
+    .client-invoice-table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/products.css">
+        <link rel="stylesheet" href="./css/filter.css">
+        <link rel="stylesheet" href="./css/product-modal.css">
+        <link rel="stylesheet" href="./css/carrito.css">
+        <link rel="stylesheet" href="./css/cuenta.css">
+        <link rel="stylesheet" href="./css/checkout.css">
+        <linK rel="stylesheet" href="./css/cliente.css">
+        <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpg ">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+        <title>Buena Vida</title>
+    </head>
+    <body>
+
+        <header>
+            <img src="./assets/images/logo.jpg" alt="Logo">
+        
+
+        <nav class="navbar">
+           
+            <div class="search-container">
+                <input type="text"
+                    placeholder="¿Qué producto estás buscando...?">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-icons">
+                <div class="icon-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Mis Favoritos</span>
+                </div>
+                <div class="icon-item" id="mi-cuenta-btn">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Mi Cuenta</span>
+                </div>
+                <div class="icon-item">
+                    <button id="cart-btn" class="cart-btn">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span id="cart-item-count"
+                            class="cart-item-count">3</span>
+                    </button>
+                    <span class="icon-label">Mi Carrito</span>
+                </div>
+
+            </div>
+        </nav>
+</header>
+        <main>
+
+            <div class="wrapper">
+                <h2>Precio</h2>
+                <div class="container">
+                    <div class="slider-track" id="slider-track"></div>
+                    <input type="range" min="1" max="100" value="1"
+                        id="slider-1" oninput="slideOne()">
+                    <input type="range" min="1" max="100" value="82"
+                        id="slider-2" oninput="slideTwo()">
+                </div>
+
+                <div class="price-inputs">
+                    <div>
+                        <label for="range1">DESDE</label>
+                        <input type="text" id="range1" readonly value="1 €">
+                    </div>
+                    <div>
+                        <label for="range2">DE</label>
+                        <input type="text" id="range2" readonly value="82 €">
+                    </div>
+                </div>
+
+                <button class="filter-button">Filtrar</button>
+            </div>
+            <div class="organ">
+
+                <productos></productos>
+            </div>
+        </main>
+
+        <!-- Modal de producto -->
+        <div class="modal" id="product-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <!-- Modal de carrito -->
+        <div class="modal" id="cart-modal">
+            <div class="modal-content">
+                <span class="close-btn2">×</span>
+                <div id="cart-body"></div>
+            </div>
+        </div>
+
+        <!-- Modal de Login -->
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <span class="close-btn-login">×</span>
+                <div id="login-body"></div>
+            </div>
+        </div>
+
+        <!-- Modal de Register -->
+        <div class="modal" id="register-modal">
+            <div class="modal-content">
+                <span class="close-btn-register">×</span>
+                <div id="register-body"></div>
+            </div>
+        </div>
+
+        <!-- Modal de checkout -->
+        <div class="modal" id="checkout-modal">
+            <div class="checkout-modal-content">
+                <span class="checkout-close-btn">×</span>
+                <div id="checkout-body"></div>
+            </div>
+        </div>
+
+        <!-- Modal de Cliente -->
+<div id="client-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn close-btn-client">&times;</span>
+        <div id="client-body">
+            <!-- El contenido se carga dinámicamente aquí -->
+        </div>
+    </div>
+</div>
+        
+
+        <script src="./js/index.js" type="module"></script>
+
+    </body>
+</html>
+
+<script>
+        let sliderOne = document.getElementById("slider-1");
+        let sliderTwo = document.getElementById("slider-2");
+        let displayValOne = document.getElementById("range1");
+        let displayValTwo = document.getElementById("range2");
+        let sliderTrack = document.getElementById("slider-track");
+        let minGap = 1;
+        let sliderMaxValue = 100;
+
+        function slideOne() {
+            if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                sliderOne.value = parseInt(sliderTwo.value) - minGap;
+            }
+            displayValOne.value = sliderOne.value + " €";
+            fillColor();
+        }
+
+        function slideTwo() {
+            if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+                sliderTwo.value = parseInt(sliderOne.value) + minGap;
+            }
+            displayValTwo.value = sliderTwo.value + " €";
+            fillColor();
+        }
+
+        function fillColor() {
+            let percent1 = (sliderOne.value / sliderMaxValue) * 100;
+            let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+            sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #5ccb5f ${percent1}% , #5ccb5f ${percent2}%, #dadae5 ${percent2}%)`;
+        }
+
+        window.onload = () => {
+            slideOne();
+            slideTwo();
+        };
+    </script>

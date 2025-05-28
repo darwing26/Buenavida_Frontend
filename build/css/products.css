@@ -1,0 +1,174 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Animación suave para el agrandamiento */
+   
+    position: relative; /* Posicionamiento relativo para el efecto de sombra */ 
+    overflow: hidden; /* Evita que el contenido agrandado se desborde */
+    z-index: 1; /* Z-index base */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta un 5% */
+}
+
+
+.product-title {
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 10px 0;
+}
+
+.product-brand {
+    color: #666;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #5ccb5f;
+    margin: 10px 0;
+   
+}
+
+
+.add-to-cart-btn {
+    display: none; /* Oculto por defecto */
+    background-color: #efa229;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Gilroy';
+    width:  75%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #5ccb5f; /* Cambia el color al pasar el cursor */
+  
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.product-card:hover .add-to-cart-btn {
+    display: block; /* Muestra el botón al pasar el cursor */
+}
+
+
+productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card-inner {
+    transition: transform 0.3s ease;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para la etiqueta de descuento */
+.discount-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e80729; /* Color rojo */
+    color: white;
+    padding: 10px 10px;
+    font-family: 'Gilroy';
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 60px;
+    z-index: 1;
+}
+
+
+.heart-icon {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+.heart-icon:hover {
+  transform: scale(1.2);
+}
+.heart-icon.favorite {
+  color: #efa229;
+}
+
+
+.product-hover-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
+.product-card:hover .product-hover-actions {
+  display: block;
+}
+/* Estilos para el corazón de favoritos */
+.favorite-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    
+    padding: 5px;
+   
+    background: rgba(255, 255, 255, 0.8);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+/* Mostrar el corazón solo al hacer hover sobre la tarjeta */
+.product-card:hover .favorite-heart {
+    opacity: 1;
+   
+}
+
+.favorite-heart:hover {
+    transform: scale(1.1);
+    
+    
+}
+
+
+
+
+/* Asegurarse de que el contenedor de la tarjeta tenga position relative */
+.product-card {
+    position: relative;
+    /* Resto de tus estilos existentes */
+}
+
+.product-card-inner {
+    position: relative;
+    /* Resto de tus estilos existentes */
+}

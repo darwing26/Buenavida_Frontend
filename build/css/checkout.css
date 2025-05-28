@@ -1,0 +1,130 @@
+/* Estilos para la modal de checkout */
+.modal#checkout-modal {
+  display: none; /* Por defecto oculta */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal#checkout-modal[style*="display: flex"] {
+  display: flex !important; /* Forzamos visibilidad cuando se activa */
+}
+
+.checkout-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 1px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.checkout-items-list {
+  flex: 2;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.checkout-order-summary {
+  flex: 1;
+  text-align: right;
+  padding-left: 20px;
+}
+
+.checkout-product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  
+}
+
+.checkout-product-item img {
+  margin-right: 10px;
+}
+
+.checkout-product-details {
+  flex-grow: 1;
+}
+
+.checkout-product-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+}
+
+.checkout-product-details p {
+  margin: 2px 0;
+  color: #666;
+}
+
+.checkout-product-details input[type="number"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  text-align: center;
+}
+
+.checkout-remove-item {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+}
+
+.checkout-order-summary h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.checkout-order-summary p {
+  margin: 5px 0;
+}
+
+#submit-order {
+  background-color: #5ccb5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-family: 'Gilroy';
+}
+
+#submit-order:hover {
+  background-color: #efa229;
+    color: black;
+}
+
+.checkout-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+h3 {
+   
+    font-family: 'Gilroy';
+}

@@ -1,0 +1,133 @@
+
+
+/* Botones de cierre */
+.close-btn-login,
+.close-btn-register {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos generales para los formularios */
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Gilroy';
+}
+
+/* Estilos para el formulario de login */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    
+    border-radius: 1px;
+    padding: 5px;
+    box-sizing: border-box; /* Evitar desbordes por padding */
+    font-family: 'Gilroy';
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #5ccb5f;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box; /* Asegurar que el ancho incluye padding y bordes */
+    font-family: 'Gilroy';
+}
+
+#login-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#login-form {
+    align-items: center;
+    width: 50%;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+.buttons-group #face {
+    background-color: #0866FF;
+}
+
+#login-form button,
+#register-form button {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    background-color: #5ccb5f;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family: 'Gilroy';
+}
+
+#login-form button:hover,
+#register-form button:hover {
+    background-color: #efa229;
+    color: black;
+    
+}
+
+.forgot-password {
+    margin-top: 10px;
+    text-align: center;
+    color: #5ccb5f;
+    cursor: pointer;
+}
+
+#register-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre el título y el formulario */
+    margin-top: 20px; /* Espacio superior para separar del header */
+}
+
+/* Estilos específicos para el formulario de registro */
+#register-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los inputs */
+    
+}
+
+#register-form p {
+    font-size: 10px;
+    margin-bottom: -5px;
+    
+}
+
+#register-form input {
+    width: 100%; /* Asegurar que los inputs ocupen el ancho completo del contenedor */
+    padding: 10px;
+    height: 40px;
+    margin: 0; /* Eliminar márgenes que puedan causar desborde */
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    outline: none;
+    box-sizing: border-box; /* Incluir padding y bordes en el ancho */
+    font-family: 'Gilroy';
+}
